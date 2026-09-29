@@ -1,0 +1,88 @@
+---
+title: Level tank
+---
+
+## Understand
+
+The dynamic behavior of the tank is described by a volume balance:
+
+$$
+A\frac{dh}{dt}=q_{in}-q_{out}
+$$
+
+with gravity-driven outlet flow:
+
+$$
+q_{out}=C_dA_o\sqrt{2gh}
+$$
+
+This example uses the current LaSiCoP tank baseline parameters: 2 m tank diameter, 0.1 m outlet diameter, 3 m maximum level, $C_d=0.62$, $\Delta P_v=10$ psi, and $C_{v,max}=300$.
+
+> **Purpose of this demo:** to show how one entry can combine explanations, equations, interactive controls, and plots. The components can still be refined before becoming the final learning activity.
+
+## Explore
+
+Change the opening and inherent valve characteristic. The plot shows how $C_v/C_{v,max}$ varies with normalized opening $u$.
+
+<div class="lasicop-widget" data-widget="valve-curve">
+  <div class="widget-head">
+    <div><span class="widget-kicker">Explore</span><h3>Inherent valve characteristic</h3></div>
+    <span class="widget-value" data-role="opening-value">50 %</span>
+  </div>
+  <div class="widget-grid">
+    <div class="widget-controls">
+      <label>Valve type
+        <select data-role="valve-type">
+          <option value="quick">Quick opening</option>
+          <option value="linear" selected>Linear</option>
+          <option value="equal">Exponential equal percentage</option>
+          <option value="rational">Rational equal percentage</option>
+        </select>
+      </label>
+      <label>Opening<input data-role="opening" type="range" min="0" max="100" value="50" step="1"></label>
+      <div class="metric-row"><span>Normalized opening, u</span><strong data-role="u-value">0.50</strong></div>
+      <div class="metric-row"><span>Cv/Cvmax</span><strong data-role="cv-value">0.50</strong></div>
+      <p class="widget-note" data-role="valve-note">Linear: the relative coefficient changes proportionally with opening.</p>
+    </div>
+    <div class="widget-plot"><canvas data-role="valve-canvas" width="720" height="380" aria-label="Inherent valve characteristic plot"></canvas></div>
+  </div>
+</div>
+
+## Experiment
+
+Use the same valve concept inside the dynamic model. You can change the opening while the simulation is running and observe the level response.
+
+<div class="lasicop-widget" data-widget="tank-response">
+  <div class="widget-head">
+    <div><span class="widget-kicker">Experiment</span><h3>Dynamic tank response</h3></div>
+    <span class="widget-value" data-role="level-badge">h = 1.50 m</span>
+  </div>
+  <div class="widget-grid">
+    <div class="widget-controls">
+      <label>Fluid<select data-role="fluid"><option value="1" selected>Water</option><option value="1.05">Juice</option><option value="0.85">Oil</option></select></label>
+      <label>Valve type<select data-role="tank-valve-type"><option value="quick">Quick opening</option><option value="linear" selected>Linear</option><option value="equal">Exponential equal percentage</option><option value="rational">Rational equal percentage</option></select></label>
+      <label>Inlet opening<input data-role="tank-opening" type="range" min="0" max="100" value="50" step="1"></label>
+      <label>Simulation speed<select data-role="speed"><option value="1">1×</option><option value="5" selected>5×</option><option value="10">10×</option></select></label>
+      <div class="metric-row"><span>Opening</span><strong data-role="tank-opening-value">50 %</strong></div>
+      <div class="metric-row"><span>q<sub>in</sub></span><strong data-role="qin-value">—</strong></div>
+      <div class="metric-row"><span>q<sub>out</sub></span><strong data-role="qout-value">—</strong></div>
+      <div class="metric-row"><span>Level</span><strong data-role="tank-level-value">1.50 m</strong></div>
+      <div class="metric-row"><span>Time</span><strong data-role="tank-time-value">0.0 s</strong></div>
+      <div class="widget-actions"><button type="button" data-role="start">Start</button><button type="button" data-role="reset" class="secondary">Reset</button></div>
+    </div>
+    <div class="widget-plot"><canvas data-role="tank-canvas" width="720" height="380" aria-label="Level versus time plot"></canvas></div>
+  </div>
+</div>
+
+## Analyze
+
+Compare what you expected with what you observed. The interactive layer is intended to support interpretation of the model, not replace it.
+
+<div class="analysis-box">
+  <span class="widget-kicker">Guiding question</span>
+  <h3>Why does the level not change instantaneously when you modify the valve opening?</h3>
+  <p>Explain your answer using the dynamic balance and the difference between $q_{in}$ and $q_{out}$.</p>
+  <textarea placeholder="Write your explanation here..."></textarea>
+</div>
+
+> **Challenge:** find an operating condition that keeps the level approximately constant. Then justify why that condition corresponds to steady state.

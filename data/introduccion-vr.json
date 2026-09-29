@@ -1,0 +1,19 @@
+{
+  "name": "Introducción al entorno VR",
+  "name_en": "Introduction to the VR environment",
+  "entries": [
+    {
+      "file": "introduccion",
+      "title": "Introducción al entorno VR",
+      "title_en": "Introduction to the VR environment",
+      "authors": [
+        "Equipo LaSiCoP"
+      ],
+      "authors_en": [
+        "LaSiCoP Team"
+      ],
+      "updated": "24 de septiembre de 2026",
+      "updated_en": "September 24, 2026"
+    }
+  ]
+}

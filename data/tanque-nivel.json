@@ -1,0 +1,19 @@
+{
+  "name": "Tanque de nivel",
+  "name_en": "Level tank",
+  "entries": [
+    {
+      "file": "introduccion",
+      "title": "Tanque de nivel",
+      "title_en": "Level tank",
+      "authors": [
+        "Equipo LaSiCoP"
+      ],
+      "authors_en": [
+        "LaSiCoP Team"
+      ],
+      "updated": "24 de septiembre de 2026",
+      "updated_en": "September 24, 2026"
+    }
+  ]
+}

@@ -1,0 +1,230 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="LaSiCoP · Laboratorio de Simulación y Control de Procesos. Plataforma educativa con documentación interactiva, simulación y realidad virtual.">
+  <title>LaSiCoP · Laboratorio de Simulación y Control de Procesos</title>
+  <link rel="icon" type="image/png" href="assets/lasicop-icon.png">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header" id="topbar">
+    <a class="header-institution" href="#inicio" aria-label="Ir al inicio">
+      <img src="assets/udg-cucei.png" alt="Universidad de Guadalajara y CUCEI">
+    </a>
+
+    <nav class="main-nav" aria-label="Navegación principal">
+      <a href="#inicio" class="active" data-i18n="nav.home">Inicio</a>
+      <a href="#lasicop" data-i18n="nav.lasicop">LaSiCoP</a>
+      <a href="#simulaciones" data-i18n="nav.simulations">Simulaciones</a>
+    </nav>
+
+    <div class="header-partners" aria-label="Entidades asociadas">
+      <img class="header-inventores" src="assets/iq-inventores.png" alt="Departamento de Ingeniería Química e Inventores CUCEI">
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="inicio">
+      <div class="hero-photo" aria-hidden="true"></div>
+      <div class="hero-tint" aria-hidden="true"></div>
+      <div class="hero-vignette" aria-hidden="true"></div>
+
+      <div class="hero-main">
+        <div class="hero-identity">
+          <div class="identity-panel" aria-label="Identidad de LaSiCoP">
+            <img class="hero-icon" src="assets/lasicop-icon.png" alt="Isotipo de LaSiCoP">
+            <img class="hero-word" src="assets/lasicop-word.png" alt="LaSiCoP">
+            <p class="hero-lab-name" data-i18n="hero.lab">Laboratorio de Simulación y Control de Procesos</p>
+          </div>
+        </div>
+
+        <div class="hero-copy">
+          <p class="hero-description" data-i18n="hero.description">Un espacio virtual que integra <strong>teoría</strong>, <strong>documentación interactiva</strong>, <strong>simulación</strong> y <strong>realidad virtual</strong> para estudiar el comportamiento, la operación y el control de procesos antes, durante y después de cada experiencia.</p>
+        </div>
+      </div>
+
+      <a class="scroll-cue" href="#lasicop" aria-label="Descubre más">
+        <span class="scroll-line"></span>
+        <span data-i18n="hero.discover">Descubre más</span>
+        <span class="scroll-line-inv"></span>
+      </a>
+    </section>
+
+    <section class="about section" id="lasicop">
+      <div class="section-shell">
+        <div class="section-heading reveal section-heading-clean">
+          <h2 data-i18n="about.title">Conectando el modelo con la experiencia</h2>
+        </div>
+
+        <div class="feature-grid reveal" aria-label="Componentes del espacio virtual">
+          <article class="feature-card">
+            <span class="feature-marker" aria-hidden="true"></span>
+            <h3 data-i18n="features.docs.title">Documentación interactiva</h3>
+            <p data-i18n="features.docs.text">Conceptos, ecuaciones, parámetros, gráficas y pequeños experimentos integrados en cada simulación.</p>
+          </article>
+          <article class="feature-card">
+            <span class="feature-marker" aria-hidden="true"></span>
+            <h3 data-i18n="features.sim.title">Simulación</h3>
+            <p data-i18n="features.sim.text">Exploración del comportamiento del proceso mediante cambios de parámetros y condiciones de operación.</p>
+          </article>
+          <article class="feature-card">
+            <span class="feature-marker" aria-hidden="true"></span>
+            <h3 data-i18n="features.vr.title">Realidad virtual</h3>
+            <p data-i18n="features.vr.text">Interacción inmersiva con equipos, variables y escenarios para experimentar el sistema de forma espacial.</p>
+          </article>
+        </div>
+
+        <div class="workflow reveal" aria-labelledby="workflow-title">
+          <div class="workflow-header">
+            <div>
+              <h3 id="workflow-title" data-i18n="workflow.title">Una misma práctica, distintos niveles de aprendizaje</h3>
+            </div>
+          </div>
+          <div class="workflow-track">
+            <article class="workflow-step">
+              <div class="step-node" aria-hidden="true"><i class="bi bi-journal-richtext"></i></div>
+              <div><h4 data-i18n="workflow.understand.title">Definir</h4><p data-i18n="workflow.understand.text">Identificamos el modelo, los conceptos y las ecuaciones fundamentales del sistema.</p></div>
+            </article>
+            <article class="workflow-step">
+              <div class="step-node" aria-hidden="true"><i class="bi bi-graph-up-arrow"></i></div>
+              <div><h4 data-i18n="workflow.explore.title">Comprender</h4><p data-i18n="workflow.explore.text">Modificamos parámetros y examinamos cómo distintas variables afectan el comportamiento del proceso.</p></div>
+            </article>
+            <article class="workflow-step">
+              <div class="step-node" aria-hidden="true"><i class="bi bi-headset-vr"></i></div>
+              <div><h4 data-i18n="workflow.experiment.title">Aplicar</h4><p data-i18n="workflow.experiment.text">Integramos las relaciones entre variables y ponemos a prueba nuestras predicciones mediante simulación y realidad virtual.</p></div>
+            </article>
+            <article class="workflow-step">
+              <div class="step-node" aria-hidden="true"><i class="bi bi-person-workspace"></i></div>
+              <div><h4 data-i18n="workflow.analyze.title">Reflexionar</h4><p data-i18n="workflow.analyze.text">Generalizamos los resultados, evaluamos nuestras decisiones y aplicamos lo aprendido a nuevas condiciones del proceso.</p></div>
+            </article>
+          </div>
+        </div>
+
+        <div class="gallery-block reveal">
+          <div class="gallery-heading">
+            <div>
+              <h3 data-i18n="gallery.title">Disfruta el desarrollo y pruebas</h3>
+            </div>
+            <div class="gallery-controls">
+              <button class="gallery-btn" id="galleryPrev" type="button" aria-label="Imagen anterior">←</button>
+              <button class="gallery-btn" id="galleryNext" type="button" aria-label="Imagen siguiente">→</button>
+            </div>
+          </div>
+          <div class="gallery-viewport" id="galleryViewport">
+            <div class="gallery-track" id="galleryTrack">
+              <figure class="gallery-card wide">
+                <img src="assets/blender-vr.png" alt="Desarrollo de un entorno de realidad virtual para LaSiCoP">
+                <figcaption><span data-i18n="gallery.dev.label">Desarrollo 3D</span><strong data-i18n="gallery.dev.text">Construcción del entorno virtual.</strong></figcaption>
+              </figure>
+              <figure class="gallery-card portrait">
+                <img src="assets/vr-01.jpeg" alt="Prueba del laboratorio virtual">
+                <figcaption><span data-i18n="gallery.test.label">Pruebas VR</span><strong data-i18n="gallery.test.text">Recorrido dentro del laboratorio.</strong></figcaption>
+              </figure>
+              <figure class="gallery-card portrait">
+                <img src="assets/vr-02.jpeg" alt="Menú del laboratorio virtual">
+                <figcaption><span data-i18n="gallery.interaction.label">Interacción</span><strong data-i18n="gallery.interaction.text">Acceso a experiencias y configuración.</strong></figcaption>
+              </figure>
+              <figure class="gallery-card portrait">
+                <img src="assets/vr-03.jpeg" alt="Identidad de LaSiCoP dentro del entorno virtual">
+                <figcaption><span data-i18n="gallery.identity.label">Identidad</span><strong data-i18n="gallery.identity.text">LaSiCoP dentro del entorno inmersivo.</strong></figcaption>
+              </figure>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="simulations section" id="simulaciones">
+      <div class="section-shell">
+        <div class="simulation-heading-block reveal">
+          <div class="simulation-heading-row">
+            <div class="simulation-heading-copy">
+              <h2 data-i18n="simulations.title">Explora los sistemas disponibles</h2>
+              <p class="section-intro" data-i18n="simulations.intro">Cada simulación integra documentación, exploración interactiva y una experiencia inmersiva virtual.</p>
+            </div>
+            <div class="simulation-controls" aria-label="Navegación de simulaciones">
+              <button class="simulation-btn" id="simulationPrev" type="button" aria-label="Simulación anterior">←</button>
+              <button class="simulation-btn" id="simulationNext" type="button" aria-label="Simulación siguiente">→</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="simulation-carousel reveal">
+          <div class="simulation-viewport" id="simulationViewport">
+            <div class="simulation-track" id="simulationTrack">
+              <article class="simulation-card simulation-card-vr">
+                <div class="simulation-copy">
+                  <h3 data-i18n="vrintro.title">Introducción al entorno VR</h3>
+                  <p data-i18n="vrintro.text">Explora el campus y la sala de inicio mientras aprendes a desplazarte, interactuar con objetos y utilizar los controles VR. El recorrido puede incorporar puntos interactivos con instrucciones y datos curiosos del proyecto antes de entrar a las simulaciones.</p>
+                  <a href="entry.html?simulation=introduccion-vr" id="vrIntroLink"><span data-i18n="vrintro.enter">Iniciar recorrido</span> <span>→</span></a>
+                </div>
+                <div class="simulation-visual vr-intro-visual" aria-hidden="true">
+                  <div class="vr-orbit orbit-one"></div>
+                  <div class="vr-orbit orbit-two"></div>
+                  <div class="vr-headset">
+                    <span class="vr-lens lens-left"></span>
+                    <span class="vr-lens lens-right"></span>
+                    <span class="vr-bridge"></span>
+                  </div>
+                  <div class="vr-controller controller-left"><span></span></div>
+                  <div class="vr-controller controller-right"><span></span></div>
+                </div>
+              </article>
+
+              <article class="simulation-card">
+                <div class="simulation-copy">
+                  <h3 data-i18n="tank.title">Tanque de nivel</h3>
+                  <p data-i18n="tank.text">Estudia el modelo dinámico del sistema, la característica inherente de la válvula, el comportamiento en estado estacionario y linealizado, y el control en lazo abierto y cerrado mediante acciones PID.</p>
+                  <a href="entry.html?simulation=tanque-nivel" id="tankLink"><span data-i18n="tank.enter">Entrar a la simulación</span> <span>→</span></a>
+                </div>
+                <div class="simulation-visual" aria-hidden="true">
+                  <div class="tank-inlet" aria-hidden="true">
+                    <span class="inlet-horizontal"></span>
+                    <span class="inlet-vertical"></span>
+                  </div>
+                  <div class="tank">
+                    <div class="tank-water"></div>
+                    <span class="tank-level">h</span>
+                  </div>
+                </div>
+              </article>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <p data-i18n="footer.rights">© 2026 LaSiCoP. Derechos Reservados.</p>
+    </div>
+        <div class="footer-institutions">
+      <img
+        class="footer-udg"
+        src="assets/udg-cucei.png"
+        alt="Universidad de Guadalajara y CUCEI"
+      >
+
+      <img
+        class="footer-iq"
+        src="assets/iq-inventores.png"
+        alt="Departamento de Ingeniería Química e Inventores"
+      >
+    </div>
+  </footer>
+
+
+  <div class="language-switcher" role="group" aria-label="Cambiar idioma">
+    <button type="button" class="lang-btn active" data-lang="es" aria-pressed="true">ES</button>
+    <span class="lang-divider" aria-hidden="true"></span>
+    <button type="button" class="lang-btn" data-lang="en" aria-pressed="false">EN</button>
+  </div>
+
+  <div class="toast" id="toast" role="status" aria-live="polite" data-i18n="toast.tank">La página del tanque de nivel será el siguiente módulo.</div>
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,124 @@
+---
+title: Tanque de nivel
+---
+
+## Comprender
+
+El comportamiento dinámico del tanque se representa mediante un balance de volumen:
+
+$$
+A\frac{dh}{dt}=q_{in}-q_{out}
+$$
+
+con una salida por gravedad:
+
+$$
+q_{out}=C_dA_o\sqrt{2gh}
+$$
+
+En este ejemplo se utilizan los parámetros base del tanque de LaSiCoP: diámetro del tanque de 2 m, orificio de salida de 0.1 m, altura máxima de 3 m, $C_d=0.62$, $\Delta P_v=10$ psi y $C_{v,max}=300$.
+
+> **Objetivo de esta demostración:** mostrar cómo una entrada puede combinar explicación, ecuaciones, controles interactivos y gráficas. Los componentes todavía pueden modificarse antes de convertirlos en la práctica definitiva.
+
+## Explorar
+
+Modifica la apertura y la característica inherente de la válvula. La gráfica muestra cómo cambia $C_v/C_{v,max}$ con la apertura normalizada $u$.
+
+<div class="lasicop-widget" data-widget="valve-curve">
+  <div class="widget-head">
+    <div>
+      <span class="widget-kicker">Explorar</span>
+      <h3>Característica inherente de la válvula</h3>
+    </div>
+    <span class="widget-value" data-role="opening-value">50 %</span>
+  </div>
+  <div class="widget-grid">
+    <div class="widget-controls">
+      <label>Tipo de válvula
+        <select data-role="valve-type">
+          <option value="quick">Apertura rápida</option>
+          <option value="linear" selected>Lineal</option>
+          <option value="equal">Isoporcentual exponencial</option>
+          <option value="rational">Isoporcentual racional</option>
+        </select>
+      </label>
+      <label>Apertura
+        <input data-role="opening" type="range" min="0" max="100" value="50" step="1">
+      </label>
+      <div class="metric-row"><span>Apertura normalizada, u</span><strong data-role="u-value">0.50</strong></div>
+      <div class="metric-row"><span>Cv/Cvmax</span><strong data-role="cv-value">0.50</strong></div>
+      <p class="widget-note" data-role="valve-note">Lineal: el coeficiente relativo cambia proporcionalmente con la apertura.</p>
+    </div>
+    <div class="widget-plot">
+      <canvas data-role="valve-canvas" width="720" height="380" aria-label="Gráfica de característica inherente"></canvas>
+    </div>
+  </div>
+</div>
+
+## Experimentar
+
+Ahora utiliza el mismo concepto de válvula dentro del modelo dinámico. Puedes cambiar la apertura durante la simulación y observar cómo evoluciona el nivel.
+
+<div class="lasicop-widget" data-widget="tank-response">
+  <div class="widget-head">
+    <div>
+      <span class="widget-kicker">Experimentar</span>
+      <h3>Respuesta dinámica del tanque</h3>
+    </div>
+    <span class="widget-value" data-role="level-badge">h = 1.50 m</span>
+  </div>
+  <div class="widget-grid">
+    <div class="widget-controls">
+      <label>Fluido
+        <select data-role="fluid">
+          <option value="1" selected>Agua</option>
+          <option value="1.05">Jugo</option>
+          <option value="0.85">Aceite</option>
+        </select>
+      </label>
+      <label>Tipo de válvula
+        <select data-role="tank-valve-type">
+          <option value="quick">Apertura rápida</option>
+          <option value="linear" selected>Lineal</option>
+          <option value="equal">Isoporcentual exponencial</option>
+          <option value="rational">Isoporcentual racional</option>
+        </select>
+      </label>
+      <label>Apertura de entrada
+        <input data-role="tank-opening" type="range" min="0" max="100" value="50" step="1">
+      </label>
+      <label>Velocidad de simulación
+        <select data-role="speed">
+          <option value="1">1×</option>
+          <option value="5" selected>5×</option>
+          <option value="10">10×</option>
+        </select>
+      </label>
+      <div class="metric-row"><span>Apertura</span><strong data-role="tank-opening-value">50 %</strong></div>
+      <div class="metric-row"><span>q<sub>in</sub></span><strong data-role="qin-value">—</strong></div>
+      <div class="metric-row"><span>q<sub>out</sub></span><strong data-role="qout-value">—</strong></div>
+      <div class="metric-row"><span>Nivel</span><strong data-role="tank-level-value">1.50 m</strong></div>
+      <div class="metric-row"><span>Tiempo</span><strong data-role="tank-time-value">0.0 s</strong></div>
+      <div class="widget-actions">
+        <button type="button" data-role="start">Iniciar</button>
+        <button type="button" data-role="reset" class="secondary">Reiniciar</button>
+      </div>
+    </div>
+    <div class="widget-plot">
+      <canvas data-role="tank-canvas" width="720" height="380" aria-label="Gráfica del nivel con el tiempo"></canvas>
+    </div>
+  </div>
+</div>
+
+## Analizar
+
+Compara lo que esperabas con lo que observaste. La idea es que la parte interactiva no sustituya el modelo, sino que ayude a interpretarlo.
+
+<div class="analysis-box">
+  <span class="widget-kicker">Pregunta guía</span>
+  <h3>¿Por qué el nivel no cambia instantáneamente cuando modificas la apertura?</h3>
+  <p>Explica tu respuesta a partir del balance dinámico y de la diferencia entre $q_{in}$ y $q_{out}$.</p>
+  <textarea placeholder="Escribe aquí tu explicación..."></textarea>
+</div>
+
+> **Reto:** busca una condición de operación que mantenga el nivel aproximadamente constante. Después justifica por qué esa condición corresponde a un estado estacionario.
